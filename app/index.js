@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Headline from "./components/Headline"
 import Button from "./components/Button"
+import Search from "./components/Search"
 import "./styles.less"
 
 import { getItem, search } from "./services/api";
@@ -13,6 +14,7 @@ export default class App extends Component {
         <Headline>Hello human!</Headline>
         <Button type="Like">Add to favorites</Button>
         <Button type="Back"></Button>
+        <Search></Search>
       </div>
     )
   }
