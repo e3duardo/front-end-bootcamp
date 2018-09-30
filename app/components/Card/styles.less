@@ -1,9 +1,27 @@
 .Card{
-  flex: 0 0 16.6%;
-  background: red;
-  height: calc(calc(calc(var(--container-size) - 20px) * .16) * 1.33);
 
-  @media(max-width: 1180px){
-    height: calc(calc(90vw * .16) * 1.33);
+  // background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+  position: relative;
+
+  &--Content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    margin: 0;
+    background: var(--color-grey-overlay);
+  }
+  &--Background{
+    flex: 1;
+  }
+  & img{
+    max-width: 100%;
   }
 }

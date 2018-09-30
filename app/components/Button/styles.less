@@ -24,7 +24,7 @@
     height: 24px;
     background-size: contain;
   }
-  &.Button--Like{
+  &.Button--Like, &.Button--MiniLike{
     border: 1px solid var(--color-light-grey);
     &::before{
       background-image: url('./assets/icon-heart-grey.svg');
@@ -42,6 +42,12 @@
       &::before{
         background-image: url('./assets/icon-heart-full.svg');
       }
+    }
+  }
+  &.Button--MiniLike{
+    border: none;
+    &::before{
+      margin-right: 0;
     }
   }
   &.Button--Back{
