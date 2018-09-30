@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app";
@@ -10,7 +10,3 @@ ReactDOM.render(<App />, root);
 module.hot
   ? module.hot.accept()
   : null
-
-
-// storiesOf("Button", module)
-//   .add("default", () => <Button>Add to favorites</Botton>);

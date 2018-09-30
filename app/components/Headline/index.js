@@ -3,11 +3,11 @@ import "./styles.less"
 
 export default class Headline extends Component {
   render() {
-    const { children } = this.props
+    const { title } = this.props;
 
     return (
       <div className="Headline">
-        <h1>{ children }</h1>
+        <h1>{ title }</h1>
       </div>
     )
   }
