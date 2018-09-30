@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./styles.less"
 
-export default class CardTitle extends Component{
+export default class CardYear extends Component{
   render(){
     const { children } = this.props;
     return (
-      <h3 className="CardTitle">{ children }</h3>
+      <span className="CardYear">{ children }</span>
     );
   }
 }
