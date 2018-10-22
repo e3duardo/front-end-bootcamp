@@ -1,0 +1,42 @@
+.MoviePage{
+	&__Runtime{
+		color: var(--secundary-color);
+		font-size: var(--font-mid-size);
+		font-weight: var(--font-weight);
+		line-height: var(--font-height);
+		margin-top: 32px;
+	}
+	&__Title{
+		margin-top: 24px;
+		margin-bottom: 32px;
+		font-size: var(--font-super-title-size);
+		font-weight: var(--font-super-title-weight);
+		line-height: var(--font-super-title-height);
+	}
+	&__Labels{
+		display: flex;
+		margin-bottom: 8px;
+	}
+	&__Row{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__Image{
+		width: 100%;
+		border-radius: var(--radius);
+	}
+	&__Detail{
+		margin-top: 40px;
+		margin-bottom: 8px;
+		color: var(--secundary-color);
+		font-size: var(--font-size);
+		font-weight: var(--font-mid-weight);
+		line-height: var(--font-height);
+	}
+}
+
+.MovieContainer{
+	max-width: var(--container-size);
+	margin: 0 auto;
+	display: grid;
+}

@@ -1,0 +1,32 @@
+.Label{
+	background-color: var(--dark-color);
+	color: var(--default-color);
+	margin-right: 16px;
+	display: flex;
+
+	font-size: var(--font-size);
+	font-weight: var(--font-mid-weight);
+	line-height: var(--line-height);
+
+	&__Image, &__Text{
+		padding: 8px;
+	    display: flex;
+	    align-items: center;
+	}
+	&__Image{
+		border-radius: var(--radius) 0 0 var(--radius);
+	}
+	&__Text{
+		border: 1px solid var(--mid-grey-color);
+		border-left: none;
+		border-radius: 0 var(--radius) var(--radius) 0;
+	}
+
+	&--Imdb &__Image{
+		background-color: var(--highlight-color);
+	}
+	&--Rotten &__Image{
+		background-color: var(--negative-color);
+		padding: 6px 12px;
+	}
+}

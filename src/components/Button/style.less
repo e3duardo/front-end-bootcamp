@@ -1,0 +1,43 @@
+.Button{
+	background-color: var(--dark-color);
+	color: var(--secundary-color);
+	border: 1px solid var(--mid-grey-color);
+	border-radius: var(--radius);
+	font-size: var(--font-size);
+	font-weight: var(--font-mid-weight);
+	line-height: var(--line-height);
+	padding: 8px 16px 8px 12px ;
+	display: flex;
+	align-items: center;
+
+	&:focus{
+		outline: none;
+	}
+	&:before{
+		background-image: url('./assets/icon-heart-grey.svg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-right: 12px;
+		width:16px;
+		height: 16px;
+		content: "";
+		display: block;
+	}
+
+	&:hover{
+		border-color: var(--negative-color);
+		color: var(--default-color);
+	}
+	&:hover:before{
+		background-image: url('./assets/icon-heart-white.svg');
+	}
+	&--active{
+		background-color: var(--negative-color);
+		border-color: var(--negative-color);
+		color: var(--default-color);
+	}
+	&--active:before{
+		background-image: url('./assets/icon-heart-full.svg');
+	}
+}

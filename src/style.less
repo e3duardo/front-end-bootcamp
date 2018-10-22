@@ -1,0 +1,95 @@
+:root {
+	--dark-color: #0A1014;
+	--grey-color: #1B2329;
+	--mid-grey-color: #353F4C;
+	--light-grey-color: #7A8C99;
+	--white-color: #FFFFFF;
+
+	--default-color: var(--white-color);
+	--secundary-color: var(--light-grey-color);
+	--active-color: #2EC4B6;
+    --highlight-color: #FF9F1C;
+    --negative-color: #FF4040;
+    --disabled-color: var(--mid-grey-color);
+
+	--font-size: 16px;
+	--font-mid-size: calc(var(--font-size) * 1.25);
+	--font-title-size: calc(var(--font-size) * 1.5);
+	--font-super-title-size: calc(var(--font-size) * 5);
+
+	--font-weight: 400;
+	--font-mid-weight: 500;
+	--font-title-weight: 500;
+	--font-super-title-weight: 700;
+
+	--font-height: 1.5;
+	--font-mid-height: 1.4;
+	--font-title-height: 1.25;
+	--font-super-title-height: 1.1;
+
+	--container-size: 1180px;
+	--radius: 5px;
+	--transition: .3s all ease-in-out;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: var(--font-size);
+	font-weight: var(--font-weigh);
+	line-height: var(--font-height);
+	width: 100vw;
+	overflow-x: hidden;
+	background-color: var(--dark-color);
+	color: var(--default-color);
+	margin: 0;
+}
+
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+button:focus{
+	outline: none;
+}
+
+a, input, button {
+	transition: var(--transition);
+}
+
+p, h1, h2, h3, small {
+	margin: 0;
+}
+
+.Badge{
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	line-height: var(--font-height);
+	color: var(--dark-color);
+	background: var(--secundary-color);
+	padding: 4px 6px;
+	border-radius: var(--radius);
+}
+
+.container{
+	max-width: var(--container-size);
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.row{
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+[class^="col-"]{
+	padding: 0 10px;
+}
+.generate-cols(12);
+.generate-cols(@n, @i: 1) when (@i =< @n) {
+  .col-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-cols(@n, (@i + 1));
+}

@@ -3,17 +3,40 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import backgrounds from "@storybook/addon-backgrounds";
 
-import { Button, Welcome } from '@storybook/react/demo';
+import SearchBar from '../src/components/SearchBar';
+import MovieCard from '../src/components/MovieCard';
+import Button from '../src/components/Button';
+import ButtonIcon from '../src/components/ButtonIcon';
+import Label from '../src/components/Label';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import '../src/normalize.less';
+import '../src/style.less';
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
+storiesOf('Components', module)
+  .addDecorator(backgrounds([
+    { name: "dark", value: "#0A1014", default: true },
+    { name: "white", value: "#FFFFFF", default: true }
+  ]))
+  .add('SearchBar', () => (
+    <SearchBar />
+  ))
+  .add('SearchBar disabled', () => (
+    <SearchBar disabled={true} />
+  ))
+  .add('MovieCard', () => (
+    <MovieCard />
+  ))
+  .add('Button', () => (
+    <Button />
+  ))
+  .add('Button active', () => (
+    <Button active={true} />
+  ))
+  .add('ButtonIcon', () => (
+    <ButtonIcon />
+  ))
+  .add('Label', () => (
+    <Label />
   ));
